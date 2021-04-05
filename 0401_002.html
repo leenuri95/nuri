@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 20px;
+            padding: 20px;
+            line-height: 1;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1em;
+            background-color: #555;
+            color: #000;
+        }
+
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            margin-top: 20px;
+        }
+
+        #play1, #play2 {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: red;
+            opacity: 0.5;
+            outline: none;
+            border: none;
+            z-index: 999;
+        }
+
+        .title {
+            margin: 0;
+            padding: 0;
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+
+        .container {
+            margin-top: 35px;
+            position: relative;
+        }
+
+        #my_video1 {
+            display: block;
+            margin-top: 20px;
+            width: 500px;
+            height: auto;
+        }
+
+        #my_video2 {
+            display: none;
+            margin-top: 20px;
+            width: 500px;
+            height: auto;
+        }
+    </style>
+    <script>
+        $(function(){
+            var video1 = document.getElementById("my_video1");
+            var video2 = document.getElementById("my_video2");
+
+            $("#play1").click(function(){
+                video1.play();
+            });
+
+            $("#play2").click(function(){
+                video2.play();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1 class="title">video control</h1>
+    <div class="container">
+        <button id="play1">play1</button>
+        <button id="play2">play2</button>
+        <video id="my_video1" src="video/makeup0.mp4"></video>
+        <video id="my_video2" src="video/makeup1.mp4"></video>
+    </div>
+</body>
+
+</html>
